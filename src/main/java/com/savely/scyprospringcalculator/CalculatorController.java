@@ -27,14 +27,14 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/minus")
-    public String minus(@RequestParam(name = "num1", required = false) Integer num1,
-                        @RequestParam(name = "num2", required = false) Integer num2) {
+    public String minus(@RequestParam(required = false, name = "num1") Integer num1,
+                        @RequestParam(required = false, name = "num2") Integer num2) {
         return calculatorService.minus(num1, num2);
     }
 
     @GetMapping(path = "/multiply")
-    public String multiply(@RequestParam(name = "num1", required = false) Integer num1,
-                           @RequestParam(name = "num2", required = false) Integer num2) {
+    public String multiply(@RequestParam(required = false, name = "num1") Integer num1,
+                           @RequestParam(required = false, name = "num2") Integer num2) {
         return calculatorService.multiply(num1, num2);
     }
 
